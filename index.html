@@ -1,0 +1,386 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>반려독버섯을 키우세요</title>
+<meta charset="utf-8">
+<meta name="description" content="반려독버섯 판매사이트 예시입니다">
+<meta property="og:title" content="반려독버섯">
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+body, h1, h2, h3, p, ul, li, div {margin: 0; padding: 0;}
+h1{font-size: 6rem; line-height: 80px; color: white;}
+h2{font-size: 3rem; color: white;}
+h3{font-size: 1.8rem; padding: 50px 8px 0px 0px; font-style: italic; line-height: 2rem; color: white;}
+p{font-size: 1.3rem; padding-top: 20px; color: white; font-weight: 400;}
+ul{list-style-type: none; display: flex; justify-content: flex-end;}
+li a{display: block; text-align: center; width: 100px; color: white; text-decoration: none; padding: 20px 0px 0px 40px;}
+nav{margin-top: 0; padding-top: 0; background: linear-gradient(to bottom, black 40%, rgba(255, 255, 255, 0)); height: 50px; z-index: 10; position: fixed; width: 100vw; top: 0;}
+html{font-family: "Playfair Display", serif; font-optical-sizing: auto; font-weight: normal; font-style: normal; word-break: keep-all;} 
+head{position: absolute;}
+body{background: black; width: 1440px;}
+footer{background: black; height: 380px;}
+footer p{font-size: 0.9rem;}
+.wrap{width: 967px; margin: auto;}
+.white{background: white; color: black; height: 900px;}
+.orng{background: linear-gradient(to bottom, black,#FF6315, black); height: 750px;}
+.thumb{height: 870px; position: relative;}
+.thumb-content{position: absolute; height: 870px;}
+.w-orng{background: linear-gradient(to bottom, white 40%, #FF6315, black); height: 1200px; padding-top: 60px;}
+.thumb-vd{width: 1440px; height: 810px; text-align: center;}
+.thumb-vd video{width: 1440px;}
+.grow{position: absolute; top:0; left: 0; padding: 50px 0px 0px 20px; line-height: 6rem;}
+.container-right{display: flex; position: absolute; right: 0; bottom: 50px; padding-right: 20px;}
+.main-f{font-family: "Parisienne", cursive; text-align: right; font-weight: 200; font-size: 300px; color: white; padding-bottom: 100px;}
+.inyourown{text-align: right; padding-bottom: 60px; line-height: 6rem;}
+.logo{background: black; width: 120px; height: 120px; position: absolute; bottom:0px; left: calc(50% - 60px); border-radius: 100%}
+.logo-img{width: 120px; height: 120px; position: absolute; bottom:0px; left: calc(50% - 60px);}
+.logo-iyr{width: 100px; height: 100px; position: absolute; top:20px; left: calc(50% - 50px);}
+.logo-big{width: 200px; height: 200px; position: absolute; right: 30px; top: 15px;}
+.pdtop{padding-top: 150px; text-align: center; font-style: normal;}
+.container-center{display: flex;flex-direction: row; justify-content: space-between; padding-top: 70px; padding-bottom: 60px; margin: auto;} 
+.s-new{height: 600px;}
+.item{height: 150px; width: 300px; position: relative;}
+.item:hover{transform: scale(1.2); filter: drop-shadow(0px 0px 30px #FF6315); opacity:200%;}
+.item img{z-index: -1; height: 150px; width: 300px; position: absolute; filter: brightness(60%); object-fit: cover;}
+.item p{z-index: 1; position: absolute; top: 0; left: 0; padding: 10px 0px 0px 10px;}
+.warning-container{position: relative; height: 700px;}
+.warning-img{width: 1440px; height: auto; padding-top: 300px;}
+.warning-img img{width: 1440px; height: auto; position: sticky;}
+.warning-text{position: absolute; z-index: 1; bottom: 200px; left: calc(50% - 251.5px);}
+.warning-text h3{font-style: normal; text-align: center; color: white;}
+.warning-text p{text-align: center; padding-top: 20px; color: white;}
+.nomal{height: 900px;}
+.nomal-container{position: relative; height: 600px; display: flex; flex-direction: row; padding-top: 60px;}
+.nomal-item{display: flex; flex-direction: column;justify-content: space-between; position: absolute; right: 0; width: 400px;}
+.normal-img{width: 300px; height: 100%; margin-right: auto; animation: left_slide 1s infinite alternate; animation-duration: 3s;}
+.normal-img img{padding-top: 100px;}
+@keyframes left_slide{
+    0% {opacity: 0; transform:translateX(-500px)}
+    100% {opacity: 100; transform:translateX(0px)}}
+.nomal-title{width: 400px; height: auto; display: flex; flex-direction: column;}
+.nomal-sub{position: absolute; bottom: 20px; left: 50; width: 400px;}
+.nomal-sub img{padding-top: 10px;}
+.nomal-p{width: 400px;}
+.big-one{width: 1200px; height: 1050px; background: radial-gradient(#FF6315,red); position: absolute; bottom:-400px; left: calc(50% - 1000px); text-align: center; border-radius: 100%; z-index: -10; overflow: hidden; filter: blur(30px); animation: left_slide 1s infinite alternate; animation-duration: 3s;}
+.w-dot{width: 70px; height: 70px; border-radius: 100%; background: red; transform: translate(120px, 70px); animation:blink 1s step-end infinite;}
+.w-dot1{width: 70px; height: 70px; border-radius: 100%; background: red; transform: translate(970px, 290px); animation:blink 2s step-end infinite;}
+.w-dot2{width: 70px; height: 70px; border-radius: 100%; background: red; transform: translate(850px, 400px); animation:blink 3s step-end infinite;}
+.w-dot3{width: 70px; height: 70px; border-radius: 100%; background: red; transform: translate(300px, 200px); animation:blink 1.5s step-end infinite;}
+.w-dot4{width: 70px; height: 70px; border-radius: 100%; background: red; transform: translate(1220px, 400px);animation:blink 4s step-end infinite;}
+@keyframes blink{50%{opacity: 0;}}
+.mangtae{position: relative; height: 800px; width: 1440px;}
+.mangtae-content{position: absolute; left:calc(50% - 486px); transform: translate(0px, 250px);}
+.mangtae-content h2{text-align: center; font-size: 120%; font-size: 7.3rem; color: black;}
+.bgbg{background: url(11223544014_009eec6321_b.jpg); background-size: cover; text-align: center; position: sticky; top:0; z-index: -10;}
+.cart{background: white; color: black; padding:3px 30px; width: 120px; text-align:center; margin-top: 30px;}
+.cart:hover{background: black; color: white; border: 1px solid white;}
+.cart-black{background: black; color: white; padding:3px 30px; width: 120px; text-align:center; margin-top: 30px; position: absolute; 
+left: calc(50% - 90px);}
+.cart-black:hover{background: white; color: black; border: 1px solid black;}
+.yd{position: relative; align-items: center; height: 582.12px; width: 100%;}
+.yd-content{position: absolute; display: flex; flex-direction: row; justify-content:flex-start; z-index: 1; width: 980px; left:calc(50% - 490px);}
+.yd-content h3{padding-top: 30px; background-size: cover;}
+.yd-p{position: absolute; bottom:-200px; left: calc(50% - 483.5px); width: 967px; text-align: center;}
+.mangtae-gif{background: url(mangtae.gif); background-size: cover; height: 850px; text-align: center;}
+.mangtae-gif img{filter: brightness(80%)}
+.youdon{margin-right: auto; text-align: left;}
+.youdon{text-align: right;}
+.iyr{width: 1440; height: 610px; position: relative;  background: url(mem-russula.jpg); background-size: cover; }
+.iyr-content{z-index:1; position:absolute; right: 240px; top: 29%;}
+.iyr h3{padding-right: 0; text-align: right;}
+.iyr-img{width: 1440px;}
+.iyr-img img{width: 1440px;}
+.texture{position: relative; display: flex; flex-direction: column-reverse; justify-content: space-between; height: 722.5px; width: 1440px;overflow: hidden;}
+.texture-container{width: 980px; height: 600px; position: relative; top: -70px; left: calc(50% - 490px);}
+.texture-main{position: absolute; top:30px; left: 0; text-align: left;}
+.texture-main h3{padding-top: 10px; text-align: left;}
+.texture-item{position: absolute; display: flex; flex-direction: row; justify-content: flex-end; width: 600px; top: 290px; left: 0;}
+.texture-item img{width: 170px}
+.texture-item p{text-align: left;}
+.texture-sub{position: absolute; top: 410px; left: 0;}
+.texture-sub h3{padding-top: 5px; text-align: left; transform: translate(430px);}
+.t-c{margin-right: 250px; background: black; color: white; padding:3px 30px; width: 120px; text-align:center; margin-top: 30px;}
+.t-c:hover{background: white; color: black; border: 1px solid black;}
+.org{padding-left: 50px;}
+.texture-img{display: flex; flex-direction: column; transform: translate(680px); width: 300px;}
+.inside{animation: rotate ease 5s infinite;}
+@keyframes rotate{from{transform: rotate(0);} to{transform: rotate(360deg);}}
+.po-main{padding-top: 30px;}
+.b{color: black;}
+.all-container{width: 1440px; height: 1200px; position: relative;}
+.line-back{text-align: center;}
+.line-back img{width: 1300px; height: auto; animation: jello 6s infinite;}
+@keyframes jello {
+  from,
+  11.1%,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  22.2% {
+    -webkit-transform: skewX(-0.5deg) skewY(-4deg);
+    transform: skewX(-0.5deg) skewY(-2deg);
+  }
+
+  33.3% {
+    -webkit-transform: skewX(4deg) skewY(2deg);
+    transform: skewX(3deg) skewY(2deg);
+  }
+
+  44.4% {
+    -webkit-transform: skewX(-1deg) skewY(-1deg);
+    transform: skewX(-1deg) skewY(-1deg);
+  }
+
+  55.5% {
+    -webkit-transform: skewX(1deg) skewY(1deg);
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+
+  66.6% {
+    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+
+  77.7% {
+    -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+
+  88.8% {
+    -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+}
+.mushes{position: absolute; top:0; right: 0; transform:translate(-250px,325px) ; width: 410px; height: 430px; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.blank{width: 100px; height: 100px; opacity: 0%}
+.small-blank{width: 20px; height: 20px; opacity: 0%; margin-right: 80px;}
+.mushes img{width: 100px; height: 100px;}
+.boxes{position: absolute; top:0; right: 0; transform:translate(-250px,325px) ; width: 410px; height: 430px; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.boxes p{width: 20px; height: 20px; background: white; border: black; color: black; padding: 0; text-align: center; line-height: 20px; margin-right: 80px; font-family: "Pretendard-light"; font-size: 1rem;}
+.big-mush{position: absolute; left: 0; top:0; transform: translate(210px, 110px);}
+.big-mush img{width: 470px; height: auto; animation: zoomIn 2s infinite; animation-direction: alternate-reverse;}
+@keyframes zoomIn {from {opacity: 0; -webkit-transform: scale3d(0.9, 0.9, 0.9);transform: scale3d(1, 1, 1s);}50% {opacity: 1;}}
+footer h3{padding-left: 50px;}
+.footer-texts{display: flex; flex-direction: column; flex-wrap: wrap; padding: 30px 0px 0px 50px; height: 200px; width: 800px;}
+.footer-container{position: relative;}
+.copy{text-align: center; padding-top: 30px;}
+.all-container h3{color: black; position: absolute; top: 180px; right: 250px; text-align: right;}
+.all-p{color: black; position: absolute; top: 250px; right: 250px; text-align: right;}
+.all-last{text-align: center; width: 967px; position:absolute; bottom: 70px; left: calc(50% - 483.5px);}
+.big-one2{width: 1440px; height: 500px; background: radial-gradient(#00FF9D 50%,skyblue); position: absolute; bottom: -300px; left:calc(50% - 720px); border-radius: 100%; filter: blur(70px); animation: pulse 5s infinite;}
+@keyframes pulse {from {-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);} 50% {-webkit-transform: scale3d(2, 2, 2);transform: scale3d(2, 2, 2); opacity: 0%;} 
+	to {-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);} opacity: 100%;}
+</style>
+</head>
+<body>
+<nav>
+	<ul>
+	  <li><a href="#normal">normal</a></li>
+	  <li><a href="#pattern">pattern</a></li>
+	  <li><a href="#texture">texture</a></li>
+	  <li><a href="#etc">etc</a></li>
+	</ul>
+</nav>
+<header>
+	<div class="thumb">
+		<div class="thumb-vd">
+			<video src="mainmush.mp4" type="video/mp4" autoplay muted loop></video>
+		</div>
+		<div class="thumb-content"></div>
+			<h1 class="grow">GROW YOUR PET POISONOUS MUSHROOM</h1>
+				<div class="container-right">
+			      <div class="tumb-text"><h1 class="main-f" link rel="preconnect" href="https://fonts.googleapis.com">
+						<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+						<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">F</h1></div>
+				   <div><h1 class="indyourown">IND YOUR OWN</h1></div>
+			    </div>
+			<div class="logo"></div>
+			<img class="logo-img" src="logo.png">
+</header>
+<section class="s-new">
+	<div class="wrap">
+	    <h3 class="pdtop">new arrivals for you</h3>
+		<div class="container-center">
+			 <div class="item">
+			 	<img src="aa.jpg">
+			 	<p>look dangerous but pure.</p>
+			 </div>
+			 <div class="item">
+			 	<img src="bb.jpg">
+			 	<p>for beginners.</p>
+			 </div>
+			 <div class="item">
+			 	<img src="cc.jpg">
+			   <p>really powerful things.</p>
+			 </div>
+		</div>
+   </div>
+</section>
+<section class="orng">
+	<div class="warning-container">
+		<div class="warning-img">
+		    <img src="web.png">
+	    </div>
+	    <div class="warning-text">
+		   	<h3 class="warning">warning</h3>
+		   	<p class="warning2">Most of the mushrooms we sell are poisonous.<br>So be sure to check the detailed description.<br>We sell poisonous mushrooms for growing.<br>We are absolutely not responsible for any side effects<br>caused by carelessness.</p>
+		</div>
+	</div>
+</section>
+<section id="normal" class="nomal">
+	<p class="pdtop">(normal)</p>
+	<div class="wrap">
+		<div class="nomal-container">
+			<div class="big-one"></div>
+			<div class="normal-img">
+				<img src="moodang.png">
+			</div>
+			<div class="normal-item">
+				    <div class="normal-title">
+						<h3>SO HOT, SO SPICY</h3>
+						<h2>Russula emetica</h2>
+						<p class="cart">add to cart</p>
+					</div>
+					<div class="nomal-sub">
+					    <h3 class="bottom">looks like mario</h3>
+					    <img class="mini" src="Russulamexicana.png" height="100vh">
+				    </div>
+				    <div class="nomal-p">
+				    	<p>Mushrooms that cause symptoms early(within 2h) of ingestion are usually less dangerous than those that cause symptoms only later(after about 6h)</p>
+					</div>
+		</div>
+    </div>
+</section>
+<section id="pattern" class="bgbg">
+	<div class="mangtae">
+		<div class="mangtae-content">
+				<p class="pdtop b">(pattern)</p>
+				<h2 class="mt-title"> Phallus indusiatus</h2>
+				<p class="cart-black">add to cart</p>
+		</div>
+		<div class="w-dot"></div>
+		<div class="w-dot1"></div>
+		<div class="w-dot2"></div>
+	</div>
+</section>
+<section class="mangtae-gif">
+	<div class="yd">
+		<div class="yd-content">
+		    <div class="youdon"><h3>YOU DON'T NEED</h3></div>
+			<div class="youdon2"><h3>ANY LACE PROPS</h3></div>
+		</div>
+		<div class="yd-p">
+			<p>Phallus indusiatus, commonly called the basket stinkhorn, bamboo mushrooms, bamboo pith, long net stinkhorn, crinoline stinkhorn, bridal veil, or veiled lady, is a fungus in the family Phallaceae, or stinkhorns. It has a cosmopolitan distribution in tropical areas, and is found in southern Asia, Africa, the Americas, and Australia, where it grows in woodlands and gardens in rich soil and well-rotted woody material. The fruit body of the fungus is characterised by a conical to bell-shaped cap on a stalk and a delicate lacy "skirt", or indusium, that hangs from beneath the cap and reaches nearly to the ground. First described scientifically in 1798 by French botanist Étienne Pierre Ventenat, the species has often been referred to a separate genus Dictyophora along with other Phallus species featuring an indusium. P. indusiatus can be distinguished from other similar species by differences in distribution, size, color, and indusium length.</p>
+		</div>
+		<div class="w-dot3"></div>
+		<div class="w-dot4"></div>
+    </div>
+</section>
+<section class="iyr">
+	<div class="iyr">
+        <div class="iyr-content">
+			<h3>In your room, mushroom</h3>
+		</div>
+		<div>
+			<img class="logo-iyr" src="logo.png">
+		</div>
+   </div>
+</section>
+<section id="texture" class="white">
+		<p class="pdtop b">(texture)</p>
+		<div class="texture">
+			<div class="big-one2"></div>
+			<div class="texture-container">
+				<div class="texture-sub">
+					<h3 class="b">jelly?</h3>
+					<h3 class="org b">or glass?</h3>
+				</div>
+				<div class="texture-item">
+					<div>
+						<img src="giphy.gif">
+					</div>
+				</div>
+				<div class="texture-main">
+					<h2 class="b">Gliophorus pssitacinus</h2>
+					<h3 class="b">covered with green mucus</h3>
+					<p class="t-c">add to cart</p>
+				</div>
+				<div class="texture-img">
+					<div class="inside"><img src="ikki-inside.png" style="width: 90%;"></div>
+					<div><img src="ikki.png"></div>
+				</div>
+			</div>
+		</div>
+</section>
+<section id="etc" class="w-orng">
+	<div class=all-container>
+	 	<div class="line-back">
+	 		<img src="lineback.png">
+	 	</div>
+	 	<h3>Look around</h3>
+	 	<p class="all-p">we select the best quality.</p>
+	 	<div class="big-mush">
+	 		<img src="big.png">
+	 		</div>
+	 		<div class="mush-item">
+		 		<div class="mushes">
+		 			<img src="1.jpg">
+		 			<img src="2.jpg">
+		 			<img src="7.jpg">
+		 			<img src="11.jpg">
+		 			<img src="12.jpg">
+		 			<img src="16.jpg">
+		 			<img src="9.jpg">
+		 			<div class="blank"></div>
+		 			<img src="13.jpg">
+		 			<img src="15.jpg">
+		 			<img src="6.jpg">
+		 			<img src="4.jpg">
+		 			<img src="5.jpg">
+		 			<img src="10.jpg">
+		 			<img src="14.jpg">
+		 			<div class="blank"></div>
+	            </div>
+	            <div class="boxes">
+	            	<p>1</p>
+	            	<p>2</p>
+	            	<p>3</p>
+	            	<p>4</p>
+	            	<p>5</p>
+	            	<p>6</p>
+	            	<p>7</p>
+	            	<div class="small-blank"></div>
+	            	<p>8</p>
+	            	<p>9</p>
+	            	<p>10</p>
+	            	<p>11</p>
+	            	<p>12</p>
+	            	<p>13</p>
+	            	<p>14</p>
+	            	<div class="small-blank"></div>
+	            </div>
+	        <p class="all-last">Different species of mushrooms produce different toxins with different effects. Even within the same species, the potential for poisoning may vary at different times of the growing season and with cooking. It is difficult even for knowledgeable people to differentiate poisonous from nonpoisonous mushrooms—folklore rules are unreliable.</p>
+	 	</div>
+	</div>
+</section>
+</body>
+<footer>
+	<h3>In your room, mushroom</h3>
+	<div class="footer-container">
+		<div class="footer-texts">
+			<p>about us</p>
+			<p>our work</p>
+			<p>services</p>
+			<p>contact us</p>
+			<p>shipping</p>
+			<p>returns</p>
+			<p>CSR</p>
+			<p>work with us</p>
+		</div>
+		<img class="logo-big" src="logo.png">
+	</div>
+	<p class="copy">copyright&copy;2024 yearsnn all rights reserved.</p>
+</footer>
+</html>
